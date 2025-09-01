@@ -1,6 +1,6 @@
 # SenseSpace DID Token Verification (TypeScript)
 
-[![npm version](https://img.shields.io/npm/v/sensespace-did-ts.svg)](https://www.npmjs.com/package/sensespace-did-ts)
+[![npm version](https://img.shields.io/npm/v/@verisense-network/sensespace-did-ts.svg)](https://www.npmjs.com/package/@verisense-network/sensespace-did-ts)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -20,7 +20,7 @@ A comprehensive TypeScript library for verifying JWT tokens with Ed25519 signatu
 ## Installation
 
 ```bash
-npm install sensespace-did-ts
+npm install @verisense-network/sensespace-did-ts
 ```
 
 ## Quick Start
@@ -28,7 +28,7 @@ npm install sensespace-did-ts
 ### Basic Token Verification
 
 ```typescript
-import { verifyToken } from 'sensespace-did-ts';
+import { verifyToken } from '@verisense-network/sensespace-did-ts';
 
 // Your JWT token
 const token = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9...";
@@ -48,7 +48,7 @@ if (result.success) {
 ### With DID Document Fetching
 
 ```typescript
-import { verifyToken } from 'sensespace-did-ts';
+import { verifyToken } from '@verisense-network/sensespace-did-ts';
 
 // Verify token and fetch DID document
 const result = await verifyToken(token, {
@@ -69,7 +69,7 @@ if (result.success) {
 ### Token Generation
 
 ```typescript
-import { generateToken } from 'sensespace-did-ts';
+import { generateToken } from '@verisense-network/sensespace-did-ts';
 import { randomBytes } from 'crypto';
 
 // Generate a random Ed25519 private key
@@ -92,7 +92,7 @@ console.log(`Generated token: ${token}`);
 ### Using the SenseSpaceTokenVerifier Class
 
 ```typescript
-import { SenseSpaceTokenVerifier } from 'sensespace-did-ts';
+import { SenseSpaceTokenVerifier } from '@verisense-network/sensespace-did-ts';
 
 // Create verifier instance
 const verifier = new SenseSpaceTokenVerifier({
@@ -204,7 +204,7 @@ const result = await verifyToken(token, {
 ### Error Handling
 
 ```typescript
-import { verifyToken } from 'sensespace-did-ts';
+import { verifyToken } from '@verisense-network/sensespace-did-ts';
 
 try {
   const result = await verifyToken(token);
@@ -226,7 +226,7 @@ try {
 ### Token Generation with Custom Claims
 
 ```typescript
-import { generateToken } from 'sensespace-did-ts';
+import { generateToken } from '@verisense-network/sensespace-did-ts';
 
 const token = generateToken({
   privateKey: privateKeyBytes,
@@ -261,7 +261,7 @@ const token = generateToken({
 ### Installation from Source
 
 ```bash
-git clone https://github.com/your-username/sensespace-did-ts.git
+git clone https://github.com/your-username/@verisense-network/sensespace-did-ts.git
 cd sensespace-did-ts
 npm install
 ```
@@ -321,7 +321,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 For issues and questions:
-- GitHub Issues: [Create an issue](https://github.com/your-username/sensespace-did-ts/issues)
+- GitHub Issues: [Create an issue](https://github.com/verisense-network/sensespace-did-ts/issues)
 - Documentation: This README and inline code comments
 
 ---

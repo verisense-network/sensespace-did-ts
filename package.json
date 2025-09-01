@@ -1,6 +1,6 @@
 {
   "name": "@verisense-network/sensespace-did-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A comprehensive TypeScript library for verifying JWT tokens with Ed25519 signatures using SS58 addresses in the SenseSpace ecosystem",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

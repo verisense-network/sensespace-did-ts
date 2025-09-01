@@ -1,0 +1,54 @@
+{
+  "name": "sensespace-did-ts",
+  "version": "1.0.0",
+  "description": "A comprehensive TypeScript library for verifying JWT tokens with Ed25519 signatures using SS58 addresses in the SenseSpace ecosystem",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "jwt",
+    "ed25519",
+    "ss58",
+    "did",
+    "sensespace",
+    "blockchain",
+    "substrate",
+    "polkadot",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/base58": "^2.0.0",
+    "@types/blake2b": "^2.1.3",
+    "@types/bs58": "^4.0.4",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.3.0",
+    "tsdown": "^0.14.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@noble/ed25519": "^3.0.0",
+    "blake2b": "^2.1.4",
+    "bs58": "^6.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "node-forge": "^1.3.1"
+  }
+}

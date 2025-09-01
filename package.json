@@ -1,5 +1,5 @@
 {
-  "name": "sensespace-did-ts",
+  "name": "@verisense-network/sensespace-did-ts",
   "version": "1.0.0",
   "description": "A comprehensive TypeScript library for verifying JWT tokens with Ed25519 signatures using SS58 addresses in the SenseSpace ecosystem",
   "main": "./dist/index.js",
@@ -20,7 +20,13 @@
     "dev": "tsdown --watch",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "npm run clean && npm run build"
+    "lint": "echo \"No linting configured\"",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build",
+    "postversion": "git push && git push --tags",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish"
   },
   "keywords": [
     "jwt",
@@ -33,8 +39,25 @@
     "polkadot",
     "typescript"
   ],
-  "author": "",
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/verisense-network/sensespace-did-ts.git"
+  },
+  "homepage": "https://github.com/verisense-network/sensespace-did-ts#readme",
+  "bugs": {
+    "url": "https://github.com/verisense-network/sensespace-did-ts/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/base58": "^2.0.0",
     "@types/blake2b": "^2.1.3",
